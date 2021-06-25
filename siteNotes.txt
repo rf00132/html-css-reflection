@@ -1,0 +1,23 @@
+width >766px is first breakpoint
+width >991 is second breakpoint
+width >1260 is third breakpoint 
+
+original: 
+netmatters logo top left, 
+top right is call button on the left and menu button on the right
+Search bar underneath both spanning page with search icon as a part of the
+search bar on the right
+
+first breakpoint:
+Phone icon is removed
+search bar snaps up inbetween netmatters logo and menu bar at fixed width 
+search bar also becomes bar and button combo
+
+second breakpoint:
+search bar becomes button which when clicked the search bar appears
+contact and support buttons appear in place of the search bar, 
+which dissapears when search button is focused
+
+third breakpoint:
+search button becomes search bar and button combo, 
+moves contact and support buttons left
