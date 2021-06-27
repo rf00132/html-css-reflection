@@ -305,13 +305,13 @@ a, a:visited {
   height: 44.57px;
 }
 
-#main-nav-bar .lower-nav-bar .lnb-ul {
+#main-nav-bar .lnb-ul {
   padding: 10px 0 0;
   max-height: 100px;
   width: 936px;
 }
 
-#main-nav-bar .lower-nav-bar .lnb-ul li {
+#main-nav-bar .lnb-ul li {
   font-size: 13px;
   vertical-align: middle;
   text-align: center;
@@ -430,7 +430,7 @@ a, a:visited {
   background: #926fb1;
 }
 
-#design-mb-btn:hover span {
+#design-mb-btn:hover .lower-nav-bar {
   background: #79539a;
 }
 
@@ -443,7 +443,7 @@ a, a:visited {
   background: #4183d7;
 }
 
-#support-mb-btn:hover span {
+#support-mb-btn:hover .lower-nav-bar {
   background: #286abd;
 }
 
@@ -456,7 +456,7 @@ a, a:visited {
   background: #d64541;
 }
 
-#services-mb-btn:hover span {
+#services-mb-btn:hover .lower-nav-bar {
   background: #bc2c28;
 }
 
@@ -469,7 +469,7 @@ a, a:visited {
   background: #67809f;
 }
 
-#software-mb-btn:hover span {
+#software-mb-btn:hover .lower-nav-bar {
   background: #526781;
 }
 
@@ -482,7 +482,7 @@ a, a:visited {
   background: #2ecc71;
 }
 
-#marketing-mb-btn:hover span {
+#marketing-mb-btn:hover .lower-nav-bar {
   background: #25a25a;
 }
 
@@ -495,7 +495,7 @@ a, a:visited {
   background: #f62459;
 }
 
-#security-mb-btn:hover span {
+#security-mb-btn:hover .lower-nav-bar {
   background: #DE093f;
 }
 

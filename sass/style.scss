@@ -293,15 +293,17 @@ a, a:visited {
     .lower-nav-bar{
         width: 100vw;
         height: 44.57px;
-        .lnb-ul{
-            padding:10px 0 0;
-            max-height: 100px;
-            width: 936px;
-            li {
-                font-size:13px;
-                vertical-align: middle;
-                text-align: center;
-            }
+        
+    }
+
+    .lnb-ul{
+        padding:10px 0 0;
+        max-height: 100px;
+        width: 936px;
+        li {
+            font-size:13px;
+            vertical-align: middle;
+            text-align: center;
         }
     }
     
@@ -409,7 +411,7 @@ a, a:visited {
 #design-mb-btn:hover{  
     fill: white; 
     background: $purple-accent-color;
-    span{
+    .lower-nav-bar{
         background: #79539a;
     }
 }
@@ -421,7 +423,7 @@ a, a:visited {
 #support-mb-btn:hover{  
     fill: white; 
     background: $blue-accent-color;
-    span{
+    .lower-nav-bar{
         background: #286abd;
     }
 }
@@ -434,7 +436,7 @@ a, a:visited {
 #services-mb-btn:hover{  
     fill: white; 
     background: $telecoms-card-color;
-    span{
+    .lower-nav-bar{
         background: #bc2c28;
     }
 }
@@ -446,7 +448,7 @@ a, a:visited {
 #software-mb-btn:hover{  
     fill: white; 
     background: $software-card-color;
-    span{
+    .lower-nav-bar{
         background: #526781;
     }
 }
@@ -458,7 +460,7 @@ a, a:visited {
 #marketing-mb-btn:hover{  
     fill: white; 
     background: $marketing-card-color;
-    span{
+    .lower-nav-bar{
         background: #25a25a;
     }
 }
@@ -470,7 +472,7 @@ a, a:visited {
 #security-mb-btn:hover{  
     fill: white; 
     background: $security-card-color;
-    span{
+    .lower-nav-bar{
         background: #DE093f;
     }
 }
@@ -1565,6 +1567,7 @@ h4{
                 width: 192px;
             }                
         }
+
         .lnb-ul{
             width: 1170px;
         }
