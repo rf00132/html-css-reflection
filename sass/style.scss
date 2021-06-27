@@ -55,15 +55,16 @@ html{
 #logo-div{
     margin-right: auto;
     box-sizing: border-box;
-    width: auto;
     min-width: 0px;
     flex-shrink: 1;
     min-height: 70px;
     display: table;
+    
     a{
+        width: 90%;
         display: table-cell;
-        text-align: center;
         vertical-align: middle;
+        justify-content: flex-start;
     }
 }
 
@@ -233,7 +234,8 @@ img{
 .call{
     background-color: transparent;
     border-color: transparent;
-    margin-right: 1.5rem;
+    margin-top: 6px;
+
 }
 .hidden{
     display: none;
@@ -247,7 +249,7 @@ img{
 .resize-img {
     flex-shrink: 1;
     max-width: 100%;
-    width: 100%;
+    display: block;
 }
 
 a, a:visited {
@@ -566,7 +568,7 @@ a, a:visited {
     margin-top: 20px;
     color: #333645;
     margin: 20px auto 0 auto;
-    button{
+    .button{
         font-size: 0.9rem;
         font-weight: 300;
         padding: 10px 15px;
@@ -1216,24 +1218,27 @@ h4{
     display: flex;
     justify-content: center;
     width: 940px;
+    height:53px;
     max-width: 940px;
     padding: 10px 15px;
-
-    div{
-        padding: 0 20px; 
-        height:53px; 
-        width: 20px;
-    }
 }
 
+.banner-img{
+    padding: 0 20px; 
+    height:53px; 
+
+    background-repeat: no-repeat;
+}
+
+//do this for every other image in the banners 
+// set each width appropriatly as is on the site
+
 #bussey{
-    
-    height:53px;
-    background: url("img/busseys-sponser-gs.png");
+    background-image: url("../img/busseys-sponser-gs.png");
 }
 
 #bussey:hover{
-    background: url("img/busseys-sponser.png");
+    background: url("../img/busseys-sponser.png");
 }
 
 
