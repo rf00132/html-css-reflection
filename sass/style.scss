@@ -150,7 +150,7 @@ input:focus{
 }
 
 
-button{
+.button{
     background-color: $btn-colour-grey;
     border-color: $btn-colour-grey;
     color: white;
@@ -999,37 +999,23 @@ a, a:visited {
 }
 
 
-#blue-accent-article{
-    div {
-        a button{
-            background-color: $blue-accent-color;
-        }
+.blue-accent-article{
+    .button{
+        background-color: $blue-accent-color;
+    }
 
-        div {
-            h3{
-                color:$blue-accent-color;
-            }
-            a button{
-                background-color: $blue-accent-color;
-            }
-        }
+    h3{
+        color:$blue-accent-color;
     }
 }
 
-#purple-accent-article{
-    div {
-        a button{
-            background-color: $purple-accent-color;
-        }
+.purple-accent-article{
+    .button{
+        background-color: $purple-accent-color;
+    }
 
-        div {
-            h3{
-                color:$purple-accent-color;
-            }
-            a button{
-                background-color: $purple-accent-color;
-            }
-        }
+    h3{
+        color:$purple-accent-color;
     }
 }
 
@@ -1644,3 +1630,5 @@ h4{
         display: none;
     }
 }
+
+// Fix the info card and article "buttons"

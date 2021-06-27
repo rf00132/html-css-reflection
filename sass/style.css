@@ -143,7 +143,7 @@ input:focus {
   color: white;
 }
 
-button {
+.button {
   background-color: #999aa2;
   border-color: #999aa2;
   color: white;
@@ -1040,28 +1040,20 @@ a, a:visited {
   color: #999aa2;
 }
 
-#blue-accent-article div a button {
+.blue-accent-article .button {
   background-color: #4183d7;
 }
 
-#blue-accent-article div div h3 {
+.blue-accent-article h3 {
   color: #4183d7;
 }
 
-#blue-accent-article div div a button {
-  background-color: #4183d7;
-}
-
-#purple-accent-article div a button {
+.purple-accent-article .button {
   background-color: #926fb1;
 }
 
-#purple-accent-article div div h3 {
+.purple-accent-article h3 {
   color: #926fb1;
-}
-
-#purple-accent-article div div a button {
-  background-color: #926fb1;
 }
 
 /*  form styles   */
