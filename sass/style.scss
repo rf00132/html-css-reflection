@@ -24,8 +24,13 @@ html{
     font-stretch: expanded;
 }
 
+.btn-hover{
+    opacity: 0.8;
+}
+
 .btn-hover:hover{
-    filter: brightness(90%);
+    opacity: 1;
+
 }
 
 /* Topbar Styles*/ 
@@ -40,6 +45,14 @@ html{
         height:56px;
 
     }
+    margin-left:20px;
+}
+
+#btn-sidemenu:hover{
+    button{
+        background-color: black;
+    }
+    
 }
 
 #txt-menu-btn{
@@ -91,6 +104,7 @@ html{
     padding: 0 40px 0 15px;
     margin-top: 10px;
     border-radius: 3px;
+    color: #555;
     
 }
 
@@ -110,20 +124,24 @@ input:focus{
     background: none;
 }
 
-#pc-search-bar{
+.pc-search-bar{
     display:flex;
     height: 56px;
-    width:237px;
+    
+    
     .btn{
         border-top-left-radius: 0;
         border-bottom-left-radius: 0;
-        width: 63px;
+
     }
-    margin-right: 3rem;
 }
 
-#pc-input-search{
+.pc-input-search{
+    width:200px;
+    margin-left: 10px;
     padding: 0 1rem;
+    border: 1px solid lightgrey;
+    border-radius: 0;
 }
 
 /* Topbar Classes  */
@@ -266,6 +284,8 @@ a, a:visited {
 }
 
 #main-nav-bar{
+
+
     position: relative;
     background-color: $dark-navy;
     text-align: center;
@@ -481,15 +501,16 @@ a, a:visited {
 
 /*  Carousel styles  *******/
 .icn-right-arrow {
-    width: 2rem;
+    width: 20px;
+    padding-bottom: 3px;
 }
 
 .carousel-item{
     text-align: center;
     width:100%;
-    height: 600px;
+    height: 100vh;
+    vertical-align: middle;
     display: flex;
-   
 }
 
 .all-caps{
@@ -503,6 +524,7 @@ a, a:visited {
 }  
 
 #slider-container{
+    border-top: 0.1px solid white;
     display: flex;
     flex-direction: column;
     flex-grow: 1;
@@ -511,33 +533,39 @@ a, a:visited {
 
 .carousel-content{
     margin: 0 auto;
-    font-size: 1.5rem;
+    
     color: white;
     line-height: 2rem;
     font-weight: 300;
-    padding-top: 150px;
+    display: block;
+    align-self: center;
+    justify-content: center;
     p {
         line-height: 2.4rem;
         margin: 2rem 0;
         font-weight: 300;
+        font-size: 20px;
     }
 
     h1{
         font-weight: 500;
         line-height: 4rem;
+        font-size: 48px;
     }
 
     button{
         font-size: 1.25rem;
-        padding-top: 10px;
-        padding-bottom: 10px;
+        padding-top: 12px;
+        padding-bottom: 9px;
+
     }
 }
 
 #web-design-container{
     background: linear-gradient(90deg, rgb(0, 0, 0) 0%, rgba(0, 0, 0, 0.4) 30%,  rgba(22, 22, 22, 0) 60%), url(https://www.netmatters.co.uk/assets/images/thumbnails/full_height_slideshow/home-3wAI.jpg);
     background-position: center;
-    background-size: cover;
+    background-size:cover;
+    background-repeat: no-repeat;
 }
 
 #btn-web-design{
@@ -551,7 +579,7 @@ a, a:visited {
 
 .info-card-container{
     padding: 30px 10px; 
-    background: rgb(245, 245, 245);
+    background: white;
 }
 
 .info-card{
@@ -567,7 +595,9 @@ a, a:visited {
     border-radius: 3px;
     margin-top: 20px;
     color: #333645;
+    box-shadow: 0 3px 35px rgba(0, 0, 0, 0.1);
     margin: 20px auto 0 auto;
+
     .button{
         font-size: 0.9rem;
         font-weight: 300;
@@ -851,12 +881,12 @@ a, a:visited {
 
 
 #culture-netmatters{
-    width: 100%;
+    
     background-color: #333645;
     color:white;
-    
+    padding: 50px 20px;
     div{
-        padding: 30px;
+        
         h1{
             font-weight: 300;
             margin-top: 15px;
@@ -910,10 +940,11 @@ a, a:visited {
     border: 1px solid $border-colour;
     border-radius: 3px;
     border-top: none;
-    margin: 30px 15px;
-
+    margin: 50px 15px;
+    box-shadow: 0 3px 35px rgba(0,0,0,0.1);
     h3{
         font-size: 1rem;
+        min-height: 3rem;
     }
 
     p{
@@ -934,6 +965,11 @@ a, a:visited {
         position: relative;
     }
 }
+.article-title:hover{
+    h3{
+        text-decoration: underline;
+    }
+}
 
 .img-article{
     object-fit: cover;
@@ -947,9 +983,14 @@ a, a:visited {
     right: 0;
     top: 10px;
     z-index: 3;
-    padding: 0 5px;
-    font-size: 10px;
+    padding: 0 6px;
+    font-size: 12px;
     border-radius: 0;
+    font-weight: 400;
+}
+
+.btn-article-top:hover{
+    text-decoration: underline;
 }
 
 #articles-container{
@@ -968,14 +1009,15 @@ a, a:visited {
 
 .article-text-container{
     padding: 20px 30px;
+    
 }
 
 .article-summary{
     margin-bottom: 30px;
-
+    font-size: 13px;
     p {
         margin-top: 1rem;
-        color: $btn-colour-grey;
+        color: #666;
     }
 }
 
@@ -983,9 +1025,10 @@ a, a:visited {
     display: flex;
     margin-top: 30px;
     width: 100%;
-
+    justify-self: flex-end;
     p{
         margin-top: 0;
+        font-size: 14px;
     }
 }
 
@@ -997,7 +1040,8 @@ a, a:visited {
 }
 
 .grey-txt-color{
-    color:$btn-colour-grey;
+    color: #666;
+
 }
 
 
@@ -1026,16 +1070,19 @@ a, a:visited {
 /*  form styles   */
 
 #newsletter-signup-form{
-    padding: 60px 40px;
     background: #ddd;
     color:#333645;
-
+    padding: 0 30px;
     form {
+        
+        padding: 50px 15px;
         button{
             background-color: $dark-navy;
             margin-top: 40px;
-            padding: 10px 10px;
+            padding: 10px 15px;
             font-weight: normal;
+            font-size: 17px;
+
         }
 
         h2{
@@ -1054,11 +1101,14 @@ a, a:visited {
 }
 
 .check-cntr{
-    display: block;
+    display: inline-block;
     cursor: pointer;
     position: relative;
-    height: 32px;
-    width: 32px;
+    
+    .checkbox{
+        height: 32px;
+        width: 32px;
+    }
 
     input{
         opacity: 0;
@@ -1071,6 +1121,13 @@ a, a:visited {
         background-color: $dark-navy;
         fill: white;
     }
+
+
+}
+
+.check-label{
+    margin-left: 60px;
+    margin-top: -30px;
 }
 
 .checkmark{
@@ -1083,6 +1140,17 @@ a, a:visited {
     border: 3px solid $dark-navy;
     border-radius: 4px;   
     fill:none;
+    display: flex;
+
+    justify-content: center;
+    svg{
+        
+        height: 16px;
+        width: 16px;
+
+        align-self: center;
+        
+    }
 }
 
 
@@ -1098,22 +1166,27 @@ a, a:visited {
 .newsletter-input{
     margin-top: 0.5rem;
     margin-bottom: 1rem;
-    width:100%;
+    width: 95%;
     height: 2.6rem;
-    border: none;
-    border-radius: 2px;
+    color: #555;
+    border:0.1px solid rgb(209, 208, 208);
+}
+
+.blue-shadow-effect{
+    padding-left: 20px;
+    transition: box-shadow 0.1s ease-in-out,
+                border-color 0.1s ease-in-out;
+}
+
+.blue-shadow-effect:focus{
+    box-shadow: 0 0 5px $blue-accent-color;
+    border: 1px solid $blue-accent-color;
 }
 
 .privacy-policy-check{
     display: flex;
     font-weight: bold;
-    div {
-        margin-left: 30px;
-
-        a, a:hover{
-            text-decoration: underline;
-        }
-    }
+    
 }
 
 h4{
@@ -1157,15 +1230,21 @@ h4{
 
 .social-media-link-container{
     width:100%;
-    margin: 2rem 0;
+    margin: 2rem -15px;
     display: flex;
-
+  
     a{
-        width:50%;
+        display:flex;
+        width:260px;
         padding: 10px 40px;
         margin: 0 15px;
         background: rgba(0,0,0,.25);
         text-align: center;
+        justify-content: center;
+        
+        svg{
+            align-self: center;
+        }
     }
 }
 
@@ -1209,6 +1288,57 @@ h4{
     padding: 50px 0;
 }
 
+.desc-cntr{
+    position:relative;
+}
+
+.desc-cntr:hover .description{
+    display: flex;
+}
+
+.description{
+    background-color: $dark-navy;
+    color: white;
+    display:none;
+    position: absolute;
+    bottom:100%;
+    left: -200px;
+    right: -200px;
+    text-align: center;
+
+    padding: 20px;
+    width: 200px;
+    margin: 0 auto 50px;
+    h3:after{
+        content:" ";
+        width: 28px;
+        height: 4px;
+        background-color: white;
+        display: block;
+        margin: 8px auto 8px auto;
+    }
+    p{
+        font-size: 13px;
+    }
+}
+
+.arrow{
+    position:absolute;
+    bottom: -40px;
+    left: 50%;
+    margin-left: -36px;
+
+    
+}
+.arrow:after{
+    content: "";
+    margin: auto;
+    display: inline-block;
+    border-color: $dark-navy transparent transparent;
+    border-style: solid;
+    border-width: 35px 36px 0;
+}
+
 .gradient-overlay{
     background: linear-gradient(180deg, rgb(235, 235, 235) 0%, rgba(255, 255, 255, 0.4) 30%);
 }
@@ -1216,7 +1346,7 @@ h4{
 .banner{
     display: flex;
     justify-content: space-between;
-    height:45.11px;
+    margin: 10px 0;
     max-width: 720px;
     width: 100%;
 
@@ -1238,8 +1368,9 @@ h4{
     background-size: contain;
 }
 
-//do this for every other image in the banners 
-// set each width appropriatly as is on the site
+.banner-link{
+    cursor:pointer;
+}
 
 #bussey{
     width: 121px;
@@ -1507,7 +1638,8 @@ h4{
     .newsletter-input{
         width:92%;
     }
- 
+    
+
     .upper-card-grid{
         justify-content: space-between;
         display: flex;
@@ -1554,7 +1686,10 @@ h4{
         opacity: 0.75;
     }
 
-    #pc-input-search{
+    .pc-search-bar{
+        margin-right: 30px;
+    }
+    .pc-input-search{
         display: none;
     }
 
@@ -1629,7 +1764,7 @@ h4{
 }
 
 //third breakpoint
-@media(min-width: 1260px){
+@media(min-width: 1259px){
 
     #articles-container{
         .article-snippet{
@@ -1667,7 +1802,7 @@ h4{
         }
     }
 
-    #pc-input-search{
+    .pc-input-search{
         display: flex;
     }
 
@@ -1683,8 +1818,7 @@ h4{
     #articles-headerbar,
     .banner,
     .lnb-ul,
-    .carousel-content,
-    #about-netmatters .grid-container {
+    .carousel-content{
         width: 1170px;
     }
 
@@ -1716,8 +1850,24 @@ h4{
         }
     }
 
-    #about-netmatters .grid-item{
-        width: 250px;
+    .social-media-link-container{
+        a{
+            width: 120px;
+            margin:0 7.5px;
+            height: 35px;
+        }
+    }
+
+    #about-netmatters {
+        padding: 32px 0;
+        .grid-container{
+            width: 1200px;
+        }
+        .grid-item{
+            width: 270px;
+            padding: 0 15px;
+            margin: 0;
+        }
     }
 
     .banner-img-mid{
@@ -1770,14 +1920,20 @@ h4{
 }
 
 @media (min-width: 991px) and (max-width: 1259px){
-    #pc-search-bar{
+    .pc-search-bar{
         width: auto;
         .btn{
             border-radius: 3px;
             margin-right: -30px;
             margin-left: 10px;
         }
+
+        input{
+            border-right: none;
+        }
     }
+
+
 
     #articles-container .article-snippet{
         width:455px;
@@ -1799,7 +1955,7 @@ h4{
 
 //disable top search bar while under the specified px width
 @media (max-width: 767px) {
-    #pc-search-bar,
+    .pc-search-bar,
     #partnerships-banner,
     #sponser-banner {
         display: none;
