@@ -1201,13 +1201,12 @@ h4{
 }
 
 #sponser-banner{
-    padding-top: 40px;
-    padding-bottom: 40px;
     display: flex;
     justify-content: center;
     img{
         height:45.11px;
     }
+    padding: 50px 0;
 }
 
 .gradient-overlay{
@@ -1216,32 +1215,121 @@ h4{
 
 .banner{
     display: flex;
-    justify-content: center;
-    width: 940px;
-    height:53px;
-    max-width: 940px;
-    padding: 10px 15px;
+    justify-content: space-between;
+    height:45.11px;
+    max-width: 720px;
+    width: 100%;
+
 }
 
-.banner-img{
-    padding: 0 20px; 
-    height:53px; 
-
+.banner-img-mid{
+    padding: 0 5px;
+    height:45.11px;
+    background-position: center;
     background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.banner-img-bottom{
+    padding: 0 5px;
+    height:54px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
 }
 
 //do this for every other image in the banners 
 // set each width appropriatly as is on the site
 
 #bussey{
+    width: 121px;
     background-image: url("../img/busseys-sponser-gs.png");
 }
 
 #bussey:hover{
-    background: url("../img/busseys-sponser.png");
+    background-image: url("../img/busseys-sponser.png");
 }
 
+#crane{
+    width: 185px;
+    background-image: url("../img/crane-sponser-gs.png");
+}
 
+#crane:hover{
+    background-image: url("../img/crane-sponser.png");
+}
+
+#beat{
+    width: 46px;
+    background-image: url("../img/beat-sponser-gs.png");
+}
+
+#beat:hover{
+    background-image: url("../img/beat-sponser.png");
+}
+
+#north{
+    width: 208px;
+    background-image: url("../img/northern-sponser-gs.png");
+}
+
+#north:hover{
+    background-image: url("../img/northern-sponser.png");
+}
+
+#future50{
+    width: 34px;
+    background-image: url("../img/future50-partner-gs.jpg");
+}
+
+#future50:hover{
+    background-image: url("../img/future50-partner.jpg");
+}
+
+#qms{
+    width: 46px;
+    background-image: url("../img/qms-partner-gs.jpg");
+}
+
+#qms:hover{
+    background-image: url("../img/qms-partner.jpg");
+}
+
+#carbon{
+    width: 133px;
+    background-image: url("../img/carbon-partner-gs.jpg");
+}
+
+#carbon:hover{
+    background-image: url("../img/carbon-partner.jpg");
+}
+
+#future-growth{
+    width: 200px;
+    background-image: url("../img/future-partner-gs.jpg");
+}
+
+#future-growth:hover{
+    background-image: url("../img/future-partner.jpg");
+}
+
+#training{
+    width: 200px;
+    background-image: url("../img/training-partner-gs.jpg");
+}
+
+#training:hover{
+    background-image: url("../img/training-partner.jpg");
+}
+
+#tomorrow{
+    width: 200px;
+    background-image: url("../img/tomorrow-partner-gs.jpg");
+}
+
+#tomorrow:hover{
+    background-image: url("../img/tomorrow-partner.jpg");
+}
 
 /* Media Queries */
 
@@ -1490,6 +1578,54 @@ h4{
         }
 
     }
+
+    .banner-img-mid{
+        height:62px;
+    }
+
+    #bussey{
+        width: 168.75px;
+    }
+
+    #crane{
+        width: 257.61px;
+    }
+    
+    #beat{
+        width: 64.63px;
+    }
+
+    #north{
+        width: 289px;
+    }
+
+    .banner-img-bottom{
+        height: 110px;
+    }
+
+    #future50{
+        width: 69px;
+    }
+
+    #qms{
+        width: 85px;
+    }
+
+    #carbon{
+        width: 200px;
+    }
+
+    #future-growth{
+        width: 273px;
+    }
+
+    #training{
+        width: 273px;
+    }
+
+    #tomorrow{
+        width: 273px;
+    }
 }
 
 //third breakpoint
@@ -1583,6 +1719,54 @@ h4{
     #about-netmatters .grid-item{
         width: 250px;
     }
+
+    .banner-img-mid{
+        height:70px;
+    }
+
+    #bussey{
+        width: 188px;
+    }
+
+    #crane{
+        width: 287px;
+    }
+    
+    #beat{
+        width: 72px;
+    }
+
+    #north{
+        width: 322px;
+    }
+      
+    .banner-img-bottom{
+        height: 88px;
+    }
+
+    #future50{
+        width: 44px;
+    }
+
+    #qms{
+        width: 60px;
+    }
+
+    #carbon{
+        width: 175px;
+    }
+
+    #future-growth{
+        width: 175px;
+    }
+
+    #training{
+        width: 175px;
+    }
+
+    #tomorrow{
+        width: 175px;
+    }
 }
 
 @media (min-width: 991px) and (max-width: 1259px){
@@ -1636,5 +1820,13 @@ h4{
         display: none;
     }
 }
+
+//doesnt work right now
+@media (max-width:767px) and (-ms-high-contrast:none){
+    .logo-div {
+        flex: 1 1 10%;
+    }
+}
+    
 
 // Fix the info card and article "buttons"
