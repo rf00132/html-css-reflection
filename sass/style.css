@@ -9,6 +9,26 @@ html {
   line-height: 1.5rem;
 }
 
+.btn-hover-black:hover {
+  background: black;
+}
+
+.btn-hover-grey:hover {
+  background: #84858f;
+}
+
+.btn-hover-blue:hover {
+  background: #2a6ec6;
+}
+
+.btn-hover-purple:hover {
+  background: #7e57a0;
+}
+
+.btn-hover-white:hover {
+  background: #ebebeb;
+}
+
 /* Topbar Styles*/
 /* Topbar IDs  */
 #btn-sidemenu {
@@ -620,6 +640,10 @@ a, a:visited {
   border-color: #926fb1;
 }
 
+#btn-web-design:hover {
+  background-color: #7e57a0;
+}
+
 /*** Card Styles***/
 .info-card-container {
   padding: 30px 10px 40px 10px;
@@ -985,6 +1009,10 @@ a, a:visited {
   vertical-align: middle;
 }
 
+#culture-netmatters .btn-hover-white:hover {
+  background: #ebebeb;
+}
+
 #articles-headerbar {
   width: auto;
   margin: 2rem 2rem 0 2rem;
@@ -1117,12 +1145,20 @@ a, a:visited {
   background-color: #4183d7;
 }
 
+.blue-accent-article .btn-hover-blue:hover {
+  background: #2a6ec6;
+}
+
 .blue-accent-article h3 {
   color: #4183d7;
 }
 
 .purple-accent-article .button {
   background-color: #926fb1;
+}
+
+.purple-accent-article .btn-hover-purple:hover {
+  background: #7e57a0;
 }
 
 .purple-accent-article h3 {
@@ -1159,6 +1195,10 @@ a, a:visited {
 #newsletter-signup-form form p {
   line-height: 1.8rem;
   padding-right: 10px;
+}
+
+#newsletter-signup-form .btn-hover-black:hover {
+  background: black;
 }
 
 .check-cntr {

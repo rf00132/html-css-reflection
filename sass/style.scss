@@ -25,6 +25,31 @@ html{
     line-height: 1.5rem;
 }
 
+//sidemenubtn carouselbtn culturebtn 
+
+//button hover states
+.btn-hover-black:hover{
+    background: black;
+}
+
+
+.btn-hover-grey:hover{
+    background:#84858f;
+}
+
+.btn-hover-blue:hover{
+    background: #2a6ec6;
+}
+
+.btn-hover-purple:hover{
+    background: #7e57a0;
+}
+
+.btn-hover-white:hover{
+    background: #ebebeb;
+}
+
+
 
 /* Topbar Styles*/ 
 
@@ -46,7 +71,6 @@ html{
     button{
         background-color: black;
     }
-    
 }
 
 #txt-menu-btn{
@@ -589,6 +613,10 @@ a, a:visited {
 #btn-web-design{
     background-color: #926fb1;
     border-color: #926fb1;
+    
+}
+#btn-web-design:hover{
+    background-color: #7e57a0;
 }
 
 
@@ -943,6 +971,9 @@ a, a:visited {
         }
 
     }
+    .btn-hover-white:hover{
+        background: #ebebeb;
+    }
     
 }
 
@@ -1076,6 +1107,10 @@ a, a:visited {
         background-color: $blue-accent-color;
     }
 
+    .btn-hover-blue:hover{
+        background: #2a6ec6;
+    }
+
     h3{
         color:$blue-accent-color;
     }
@@ -1086,10 +1121,18 @@ a, a:visited {
         background-color: $purple-accent-color;
     }
 
+    .btn-hover-purple:hover{
+        background: #7e57a0;
+    }
+
     h3{
         color:$purple-accent-color;
     }
 }
+
+
+
+
 
 /*  form styles   */
 
@@ -1121,6 +1164,10 @@ a, a:visited {
             line-height: 1.8rem;
             padding-right: 10px;
         }
+    }
+
+    .btn-hover-black:hover{
+        background: black;
     }
 }
 
