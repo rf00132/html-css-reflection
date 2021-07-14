@@ -15,23 +15,16 @@ $security-card-color: #f62459;
 
 *{
     margin: 0;
-    line-height: 1.5rem;
+    
 }
 
 html{
     font-family: Poppins, sans-serif;
     letter-spacing: 0.02rem;
     font-stretch: expanded;
+    line-height: 1.5rem;
 }
 
-.btn-hover{
-    opacity: 0.8;
-}
-
-.btn-hover:hover{
-    opacity: 1;
-
-}
 
 /* Topbar Styles*/ 
 
@@ -39,11 +32,12 @@ html{
 
 #btn-sidemenu{
     font-size: 0.5rem;
+    
     button{
-        padding: 2px 12px 0 12px;
+        padding: 0 12px;
         background-color: $dark-navy;
         height:56px;
-
+        line-height: 8px;
     }
     margin-left:20px;
 }
@@ -57,12 +51,14 @@ html{
 
 #txt-menu-btn{
     font-size: 0.7rem;
+    
 }
 
 #icn-menu{
-    width: 2.2rem;
-    height: 1.2rem; 
-    margin-bottom: -5px;  
+    display:block;
+    font-size: 30px;
+    font-stretch: ultra-expanded;
+    padding-bottom: -5px;
 }
 
 #logo-div{
@@ -105,7 +101,7 @@ html{
     margin-top: 10px;
     border-radius: 3px;
     color: #555;
-    
+
 }
 
 #actions{
@@ -124,11 +120,11 @@ input:focus{
     background: none;
 }
 
+/* Topbar Classes  */
+
 .pc-search-bar{
     display:flex;
     height: 56px;
-    
-    
     .btn{
         border-top-left-radius: 0;
         border-bottom-left-radius: 0;
@@ -144,7 +140,6 @@ input:focus{
     border-radius: 0;
 }
 
-/* Topbar Classes  */
 .block{
     display: block;
 }
@@ -156,7 +151,9 @@ input:focus{
     min-height: 157px;
 }
 
-
+.icn-top{
+    font-size: 24px;
+}
 
 .top-row {
     display: flex;
@@ -284,8 +281,6 @@ a, a:visited {
 }
 
 #main-nav-bar{
-
-
     position: relative;
     background-color: $dark-navy;
     text-align: center;
@@ -296,12 +291,14 @@ a, a:visited {
     justify-content: center;
     height: auto;
     flex-wrap: wrap;
-    padding: 0 15px;
+    
 
     .main-nav-ul{ 
         list-style: none;
         display: flex;
         padding:0;
+        border-left: 1px solid hsla(0,0%,100%,.1);
+        border-right: 1px solid rgba(0,0,0,.25);
     }
 
     .link-btn div {
@@ -313,9 +310,8 @@ a, a:visited {
     } 
 
     .lower-nav-bar{
-        width: 100vw;
         height: 44.57px;
-        
+        padding: 0 -20px 0 0;
     }
 
     .lnb-ul{
@@ -356,9 +352,8 @@ a, a:visited {
     letter-spacing: 0.015rem;
 }
 
-.icon-mb{
-    height:20px;
-    width:20px;
+.icon-mb{ 
+    font-size: 20px;
 }
 
 .nav-btn{
@@ -381,13 +376,14 @@ a, a:visited {
 }
 
 .lower-nav-bar{
-    width: 100vw;
     position: absolute;
     vertical-align: middle;
     top: 100%;
     left: 0;
     right:0; 
     display: none;
+    padding: 0;
+    
 }
 
 .lnb-ul{
@@ -395,6 +391,7 @@ a, a:visited {
     text-align: left;
     margin: 0 auto;
     padding:0;
+    padding-right:-20px;
     justify-content: left;
     list-style: none;
     position: absolute;
@@ -410,12 +407,6 @@ a, a:visited {
     }
 }
 
-.lnb-cntr{
-    width:200%;
-    max-width:none;
-    padding:0;
-}
-
 .lnb-h::after{
     content:"-";
     width: auto;
@@ -427,11 +418,17 @@ a, a:visited {
 }
 
 #design-mb-btn{
-    fill: $purple-accent-color;
+    i{
+        color: $purple-accent-color;
+    }
+    
 }
 
 #design-mb-btn:hover{  
-    fill: white; 
+    i{
+        color: white;
+    }
+    
     background: $purple-accent-color;
     .lower-nav-bar{
         background: #79539a;
@@ -439,11 +436,15 @@ a, a:visited {
 }
 
 #support-mb-btn{
-    fill: $blue-accent-color;
+    i{
+        color: $blue-accent-color;
+    }
 }
 
 #support-mb-btn:hover{  
-    fill: white; 
+    i{
+        color: white;
+    }
     background: $blue-accent-color;
     .lower-nav-bar{
         background: #286abd;
@@ -451,12 +452,17 @@ a, a:visited {
 }
 
 #services-mb-btn{
+    i{
+        color: $telecoms-card-color;
+    }
     fill: $telecoms-card-color;
     
 }
 
 #services-mb-btn:hover{  
-    fill: white; 
+    i{
+        color: white;
+    }
     background: $telecoms-card-color;
     .lower-nav-bar{
         background: #bc2c28;
@@ -464,11 +470,15 @@ a, a:visited {
 }
 
 #software-mb-btn{
-    fill: $software-card-color;
+    i{
+        color: $software-card-color;
+    }
 }
 
 #software-mb-btn:hover{  
-    fill: white; 
+    i{
+        color: white;
+    }
     background: $software-card-color;
     .lower-nav-bar{
         background: #526781;
@@ -476,11 +486,16 @@ a, a:visited {
 }
 
 #marketing-mb-btn{
+    i{
+        color: $marketing-card-color;
+    }
     fill: $marketing-card-color;
 }
 
 #marketing-mb-btn:hover{  
-    fill: white; 
+    i{
+        color: white;
+    }
     background: $marketing-card-color;
     .lower-nav-bar{
         background: #25a25a;
@@ -488,11 +503,15 @@ a, a:visited {
 }
 
 #security-mb-btn{
-    fill: $security-card-color;
+    i{
+        color: $security-card-color;
+    }
 }
 
 #security-mb-btn:hover{  
-    fill: white; 
+    i{
+        color: white;
+    }
     background: $security-card-color;
     .lower-nav-bar{
         background: #DE093f;
@@ -508,7 +527,7 @@ a, a:visited {
 .carousel-item{
     text-align: center;
     width:100%;
-    height: 100vh;
+    height: calc(100vh - 157px);
     vertical-align: middle;
     display: flex;
 }
@@ -533,7 +552,6 @@ a, a:visited {
 
 .carousel-content{
     margin: 0 auto;
-    
     color: white;
     line-height: 2rem;
     font-weight: 300;
@@ -557,12 +575,12 @@ a, a:visited {
         font-size: 1.25rem;
         padding-top: 12px;
         padding-bottom: 9px;
-
+        padding: 15px 20px 12px 20px;
     }
 }
 
 #web-design-container{
-    background: linear-gradient(90deg, rgb(0, 0, 0) 0%, rgba(0, 0, 0, 0.4) 30%,  rgba(22, 22, 22, 0) 60%), url(https://www.netmatters.co.uk/assets/images/thumbnails/full_height_slideshow/home-3wAI.jpg);
+    background: linear-gradient(90deg, rgb(0, 0, 0) 0%, rgba(0, 0, 0, 0.6) 60%,  rgba(22, 22, 22, 0) 100%), url(https://www.netmatters.co.uk/assets/images/thumbnails/full_height_slideshow/home-3wAI.jpg);
     background-position: center;
     background-size:cover;
     background-repeat: no-repeat;
@@ -578,13 +596,13 @@ a, a:visited {
 /*** Card Styles***/
 
 .info-card-container{
-    padding: 30px 10px; 
+    padding: 30px 10px 40px 10px; 
     background: white;
 }
 
 .info-card{
     font-size: 0.85rem;
-    line-height: 0.6rem;
+    line-height: 1.5rem;
     text-align: center;
     max-width: 720px;
     min-width: 0;
@@ -596,7 +614,11 @@ a, a:visited {
     margin-top: 20px;
     color: #333645;
     box-shadow: 0 3px 35px rgba(0, 0, 0, 0.1);
-    margin: 20px auto 0 auto;
+    margin: 20px auto 10px auto;
+
+    i{
+        font-size: 24px;
+    }
 
     .button{
         font-size: 0.9rem;
@@ -639,15 +661,20 @@ a, a:visited {
 }
 
 .icon-card{
-    display: block;
-    width: 24px;
+    display: table;
+    width: 60px;
     height: 24px;
     margin: 10px auto;
+    text-align: left;
+    padding-top: 8px;
     text-align: center;
-    padding-top: 18px;
-    padding-left: auto;
-    padding-right: auto;
     fill:white;
+    i{
+        display:table-cell;
+        vertical-align: middle;
+        align-self: center;
+        
+    }
 }
 
 #software-card{  
@@ -657,17 +684,18 @@ a, a:visited {
         
         .card-icon-container{
             background-color: white;
-            svg{
-                fill: $software-card-color;
+            i{
+                color:$software-card-color;
             }
         }
+        
 
         .btn-card{
             background-color: white;
             color: $software-card-color;
         }
         h2:after{           
-            background-color: white;
+            background-color: rgb(253, 234, 234);
         }
     }
 
@@ -677,8 +705,8 @@ a, a:visited {
 
     .card-icon-container{
         background-color: $software-card-color;
-        svg{
-            fill: white;
+        i{
+            color: white;
         }
     }  
 }
@@ -689,8 +717,8 @@ a, a:visited {
         color:white;
         .card-icon-container{
             background-color: white;
-            svg{
-                fill: $blue-accent-color;
+            i{
+                color: $blue-accent-color;
             }
         }
 
@@ -709,8 +737,8 @@ a, a:visited {
 
     .card-icon-container{
         background-color: $blue-accent-color;
-        svg{
-            fill: white;
+        i{
+            color: white;
         }
     }
 }
@@ -721,8 +749,8 @@ a, a:visited {
         color:white;
         .card-icon-container{
             background-color: white;
-            svg{
-                fill: $marketing-card-color;
+            i{
+                color: $marketing-card-color;
             }
         }
 
@@ -741,8 +769,8 @@ a, a:visited {
 
     .card-icon-container{
         background-color: $marketing-card-color;
-        svg{
-            fill: white;
+        i{
+            color: white;
         }
     }
 }
@@ -753,8 +781,8 @@ a, a:visited {
         color:white;
         .card-icon-container{
             background-color: white;
-            svg{
-                fill: $telecoms-card-color;
+            i{
+                color: $telecoms-card-color;
             }
         }
 
@@ -772,8 +800,8 @@ a, a:visited {
 
     .card-icon-container{
         background-color: $telecoms-card-color;
-        svg{
-            fill: white;
+        i{
+            color: white;
         }
     }
 }
@@ -784,8 +812,8 @@ a, a:visited {
         color:white;
         .card-icon-container{
             background-color: white;
-            svg{
-                fill: $purple-accent-color;
+            i{
+                color: $purple-accent-color;
             }
         }
 
@@ -805,8 +833,8 @@ a, a:visited {
 
     .card-icon-container{
         background-color: $purple-accent-color;
-        svg{
-            fill: white;
+        i{
+            color: white;
         }
     }
 }
@@ -817,8 +845,8 @@ a, a:visited {
         color:white;
         .card-icon-container{
             background-color: white;
-            svg{
-                fill: $security-card-color;
+            i{
+                color: $security-card-color;
             }
         }
 
@@ -837,8 +865,8 @@ a, a:visited {
 
     .card-icon-container{
         background-color: $security-card-color;          
-        svg{               
-            fill: white;           
+        i{               
+            color: white;           
         }      
     }
 }
@@ -850,8 +878,8 @@ a, a:visited {
 
         .card-icon-container{
             background-color: white;
-            svg{
-                fill: $purple-accent-color;
+            i{
+                color: $purple-accent-color;
             }
         }
 
@@ -870,23 +898,19 @@ a, a:visited {
 
     .card-icon-container{
         background-color: $purple-accent-color;
-        svg{
-            fill: white;
+        i{
+            color: white;
         }       
     }
 }
 
-
-
-
-
 #culture-netmatters{
-    
     background-color: #333645;
     color:white;
     padding: 50px 20px;
     div{
-        
+        padding-top: 0;
+        padding-bottom: 0;
         h1{
             font-weight: 300;
             margin-top: 15px;
@@ -898,6 +922,7 @@ a, a:visited {
         }
 
         p{
+
             line-height: 1.8rem;
             margin-bottom: 25px;
         }
@@ -948,7 +973,7 @@ a, a:visited {
     }
 
     p{
-        font-size: 0.9rem;
+        font-size: 13px;
         line-height: 1.4rem;
     }
 }
@@ -1005,6 +1030,7 @@ a, a:visited {
     white-space: normal;
     line-height: 35px;
     margin-top: 20px;
+    font-size: 17px;
 }
 
 .article-text-container{
@@ -1064,8 +1090,6 @@ a, a:visited {
         color:$purple-accent-color;
     }
 }
-
-
 
 /*  form styles   */
 
@@ -1128,6 +1152,10 @@ a, a:visited {
 .check-label{
     margin-left: 60px;
     margin-top: -30px;
+    display: block;
+    a{
+        text-decoration: underline;
+    }
 }
 
 .checkmark{
@@ -1144,12 +1172,9 @@ a, a:visited {
 
     justify-content: center;
     svg{
-        
         height: 16px;
         width: 16px;
-
         align-self: center;
-        
     }
 }
 
@@ -1174,13 +1199,14 @@ a, a:visited {
 
 .blue-shadow-effect{
     padding-left: 20px;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.08%);
     transition: box-shadow 0.1s ease-in-out,
                 border-color 0.1s ease-in-out;
 }
 
 .blue-shadow-effect:focus{
-    box-shadow: 0 0 5px $blue-accent-color;
-    border: 1px solid $blue-accent-color;
+    box-shadow: 0 0 5px #00b2dfb2;
+    border:1px solid #00b2dfb2;
 }
 
 .privacy-policy-check{
@@ -1215,18 +1241,14 @@ h4{
         
     }
 
-    .address{
+    .address1,
+    .address2{
         li:last-of-type{
             margin-top: 1.5rem;
         }  
     }
 }
 
-.address{
-    li:last-of-type{
-        margin-top: 2rem;
-    }  
-}
 
 .social-media-link-container{
     width:100%;
@@ -1309,6 +1331,9 @@ h4{
     padding: 20px;
     width: 200px;
     margin: 0 auto 50px;
+    h3{
+        font-weight: normal;
+    }
     h3:after{
         content:" ";
         width: 28px;
@@ -1555,7 +1580,6 @@ h4{
         justify-content: center;
         div{
             max-width:720px;
-            padding: 50px 15px;
         }
     }
 
@@ -1676,7 +1700,7 @@ h4{
     .lower-card-grid{
         margin: 0 auto 20px auto;
         .info-card{
-            width: 397px;
+            width: 393px;
             height: 228px;
         }  
     }
@@ -1750,14 +1774,8 @@ h4{
         width: 200px;
     }
 
-    #future-growth{
-        width: 273px;
-    }
-
-    #training{
-        width: 273px;
-    }
-
+    #future-growth,
+    #training,
     #tomorrow{
         width: 273px;
     }
@@ -1765,6 +1783,10 @@ h4{
 
 //third breakpoint
 @media(min-width: 1259px){
+
+    .pc-search-bar{
+        margin-right: 0px;
+    }
 
     #articles-container{
         .article-snippet{
@@ -1843,7 +1865,6 @@ h4{
         padding: 30px auto;
         div{
             width:1200px;
-            padding:30px 0;
             div{
                 width:600px;
             }
@@ -1851,6 +1872,7 @@ h4{
     }
 
     .social-media-link-container{
+        margin: 15px 0 15px -15px;
         a{
             width: 120px;
             margin:0 7.5px;
@@ -1867,6 +1889,11 @@ h4{
             width: 270px;
             padding: 0 15px;
             margin: 0;
+        }
+        .address1{
+            li:last-of-type{
+                margin-top: 2.75rem;
+            }  
         }
     }
 
