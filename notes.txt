@@ -1,0 +1,151 @@
+cookie class css
+
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    background-color: rgba(0,0,0,.7);
+    display: flex;
+    outline: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    width: 600px;
+
+main cookie popup text:
+
+Cookies Policy
+h3, 333645, font size 26px, padding for container of h3: 15px 20px.
+
+Horizontal line
+
+We use cookies to obtain aggregate data regarding site traffic and interaction, in order to identify user trends and obtain insights in order to continually improve our site. These cookies enable us to improve your customer experience as you use our site and help provide you with relevant online marketing.
+
+You can see a list of the other companies who use cookies on this website, by visiting cookie settings at the bottom of each page. For full details of how we use your personal information, and your rights in relation to it, view our privacy policy.
+
+p tags, 16px, color 666, 25px between the two paragraphs
+
+horizontal line
+
+change settings button
+
+999aa2, font size 17px like all buttons. onclick shows settings over the top.
+
+accept cookies button
+
+see below for purple used
+at first breakpoint they both go to one line.
+
+cookie settings class
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    z-index: 8000;
+    overflow-y: auto;
+
+cookie settings text:
+
+Cookies Preferences <- h3 26px font color 333645, margin-bottom 15px
+
+
+Netmatters uses cookies on their website. Cookies are small text files that are stored on your computer or other device by websites that you visit. This page explains the cookies we use and what we use them for, and lets you turn them on or off. (Some cookies are necessary in order for our website to work properly.) We also explain below which other companies use cookies on our website and what they use them for, and lets you turn those other companies' cookies on or off.
+
+Our website uses cookies in order to make the website easier to use, to support the provision of information and functionality to you, as well as to provide us with information about how the website is used so that we can make sure it is as up to date, relevant and error free as we can. We also use cookies to try to ensure that our online adverts reflect the interests of web users. Further information about the types of cookies that are used on our website is set out box below.
+
+As well as the options provided below, you can choose to restrict or block cookies through your browser settings at any time. For more information about how to do this, and about cookies in general, you can visit www.allaboutcookies.org and www.youronlinechoices.eu. However, please be aware that restricting or blocking cookies set on our website may impact the functionality or performance of the website, or prevent you from using certain services provided through the website.
+
+Please note that third parties (including, for example, advertising networks and providers of external services like website analysis services) may also use cookies, over which we have no control, although we may receive services from these third parties (including, for example, for targeted advertising purposes and website analytics). These cookies are likely to be performance cookies or targeting cookies (as described below).
+
+all h5 tags, color: 666, size 14px, margin: 10px 0;
+
+Functional Cookies <- h1, 333645, margin-bottom 28px, font size 36px.
+
+Functional cookies allow our website to remember choices you make, such as your user name, log in details or language preferences, and any customisations you make to pages on our website during your visit.
+
+
+all h5 tags, color: 666, size 14px, margin: 10px 0;
+
+Examples of how we use these cookies include:
+
+h4, strong, margin-bottom 15px, font-size 16px.
+
+live chat
+
+h5, li, color: 666, size 14px, margin: 10px 0;
+
+enable/disable buttons bottom right, 926fb1 for disable on left, AAA for enable on right.
+
+Performance & Analytics
+
+font-size 36px, color: 333645, margin-bottom 28px.
+
+These cookies help us understand how people use our website. They collect information such as which pages on our website visitors go to most often, which features they use, and which websites people have visited before they visit ours. We use this information to improve our website and provide a better user experience.
+typical h5 properties.
+
+Examples of how we use these cookies include:
+*see last one like this
+
+Monitoring and providing statistics on how our website is used.
+
+Helping us improve our website by measuring any errors that occur.
+
+Testing the website's design and operability
+
+li, 666, 16px.
+
+same set of enable diable buttons.
+
+Different web browsers may use different methods for managing cookies. Please follow the instructions below, from the web browser manufacturers directly, to configure your browser settings*.
+
+^-same as other h5 elements.
+
+Microsoft Internet Explorer (IE)
+
+Google Chrome
+
+Safari
+
+Firefox
+
+li, a, 16px, 333645
+
+show detailed preferences button.
+
+999aa2, padding 5px 15px, font-size 17px.
+
+onclick, button text becomes hide detailed preferences, displays table
+
+table headers:
+company, domain, []
+
++ Lead Forensics, https://www.leadforensics.com/
++ Hotjar Ltd, hotjar.com
++ LinkedIn Corporation, licdn.com.
++ Facebook Inc., facebook.com, facebook.net
++ Google Inc.,  google.com, googletagmanager.com, google-analytics.com
++ Tawk.to Inc., tawl.io
+
+table headers bg colour AAA
+table cells bg colour DDD
+
+all 16px
+
+3rd row is same enable disable buttons as earlier.
+
+bottom right after table, cancel accept cookies buttons
+
+cancel left, 999aa2, padding 5px 15px, clicking sends user back to og cookie popup.
+
+accept cookies right, same purple as before, padding 5px 15px
+all buttons font-size 17px
+

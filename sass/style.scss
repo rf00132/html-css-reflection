@@ -5,6 +5,8 @@ $medium-grey: #dddddd;
 $btn-colour-grey: #999aa2;
 $search-bar-colour: rgba(0, 0, 0, .1);
 $border-colour: rgb(206, 204, 204);
+$container-width: 1px;
+
 
 $software-card-color: #67809f;
 $blue-accent-color: #4183d7;
@@ -13,19 +15,570 @@ $telecoms-card-color: #d64541;
 $purple-accent-color: #926fb1;
 $security-card-color: #f62459;
 
+
 *{
     margin: 0;
-    
+}
+
+button{
+    cursor: pointer;
 }
 
 html{
     font-family: Poppins, sans-serif;
     letter-spacing: 0.02rem;
     font-stretch: expanded;
-    line-height: 1.5rem;
+    line-height: 1.5rem; 
 }
 
-//sidemenubtn carouselbtn culturebtn 
+body{
+    overflow:hidden;
+}
+
+//cookie popup
+
+.hide-settings{
+    .cookie-settings{
+        display: none;
+    }
+}
+
+.hide-detail{
+    .cookie-details{
+        display: none;
+    }
+}
+
+
+.show-settings{
+    .cookie-settings{
+        display: flex;
+    }
+}
+
+.show-detail{
+    .cookie-details{
+        display: flex;
+    }
+}
+
+.hide-main{
+    .main-popup{
+        display: none;
+    }
+    
+}
+
+.show-main{
+    .main-popup{
+        display: flex;
+    }
+}
+
+.show-popup{
+    display: flex;
+}
+
+.hide-popup{
+    display:none;
+}
+
+#cookie-popup{
+    h3{
+        color: #333645;
+        font-size: 26px;
+        padding: 20px 0 5px;
+        font-weight: 400;
+    }
+
+    .main-popup{
+        h3{
+            padding: 20px;
+        }
+    }
+
+    p{
+        color: #666;
+    }
+
+    background-color: rgba(0,0,0,.7);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    outline: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+
+
+    
+}
+
+
+.cookie-button{
+    padding: 15px;
+    text-transform: uppercase;
+    height: 46px;
+    margin: auto 5px;
+    box-shadow: none;
+    border: none;
+    font-size: 16px;
+    text-transform: uppercase;
+    border-radius: 3px;
+    letter-spacing: .4px;
+}
+
+.cookie-btn-cntr{
+    padding: 19px 20px 20px;
+    
+    justify-content: space-between;
+    button{
+        color: white;
+        width: 100%;
+    }
+
+    button:first-child{
+        margin-bottom: 30px;
+    }
+}
+
+.grey-btn{
+    background: #999aa2;
+    color: white;
+}
+
+.grey-btn:hover{
+    background: #76777c;
+}
+
+.white-btn{
+    background: #fff;
+    color: #aaa;
+}
+
+.purple-btn{
+    background: #926fb1;
+    color: white;
+    
+}
+
+.purple-btn:hover{
+    background: #7e57a0;
+}
+
+.cookie-body{
+    padding: 20px;
+    line-height: 1.875rem;
+    
+    p:first-child{
+        margin-bottom: 25px;
+    }
+    border-bottom: 1px solid #e5e5e5;
+    border-top: 1px solid #e5e5e5;
+}
+
+.main-popup{
+    background: #fff;
+    position: relative;
+    border-radius: 3px;
+    max-width: 600px;
+    min-width: 120px;
+    margin: 30px;
+    
+}
+
+/*
+.main-popup-cntr{
+
+}
+*/
+
+//cookie settings 
+
+.cookie-settings{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    background-color: #fff;
+    z-index: 200;
+
+    h5{
+        color: #666;
+        font-size: 14px;
+        margin: 10px 0;
+        font-weight: 500;
+        line-height: 1.1;
+    }
+
+    h1{
+        color: #333645;
+        font-size: 36px;
+        font-weight: 400;
+        margin: 36px 0 33px;
+        line-height: 2.5rem;
+    }
+    ul{
+        margin: 10px 0;
+    }
+    
+}
+
+.extra-top-margin{
+    margin-top: 30px;
+}
+
+.settings-cntr{
+    max-width:100vw;
+    padding: 0 15px;
+    margin: 0 auto;
+    overflow-x: hidden;
+}
+
+
+.cookie-details{
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    
+    .cookie-details-inner{
+        overflow-x: auto;
+    }
+}
+
+.detail-header,
+.detail-row{
+    display: flex;
+    flex-shrink: 0;
+
+    width: 728px;
+
+    .col1{
+        width: 150px;
+    }
+
+    .col2{
+        width: 275px;
+    }
+
+    .col3{
+        width: 225px;
+        display: flex;
+        flex-wrap: nowrap;
+    }
+
+    div{
+        padding: 15px;
+    }
+    
+}
+
+.col1, .col2, .col3{
+    border: 1px solid white;
+}
+
+.detail-header{
+    color: #fff;
+    background: #aaa;
+}
+
+.detail-row{
+    background: #ddd;
+    color: #666;
+}
+
+.grey-txt{
+    color:#666;
+}
+
+.dark-txt{
+    color:#333645
+}
+
+
+#cookie-details-btn{
+    margin-bottom: 10px;
+    margin-top: 20px;
+}
+
+#return-to-cookies-btn{
+    margin-bottom: 30px;
+    margin-top: 40px;
+}
+
+//sticky nav
+.extra-margin{
+    margin-top: 169px;
+}
+
+.sticky{
+    position: fixed;
+    z-index: 5;
+    width: 100vw;
+    transition: top 0.4s ease-in-out 0.1s;
+    nav{
+        background: $dark-navy;
+        padding-right: 16.5px;
+    }
+
+    header{
+        background: white;
+        padding-right: 16.5px;
+    }
+}
+
+.sticky-show{
+    top: 0;
+}
+
+.sticky-hide{
+    top: -100%;
+}
+
+
+#position-tracker{
+    position: fixed;
+    top: 0;
+}
+
+#content{
+    max-width: 100vw;
+    overflow-y: scroll;
+    height: 100vh;
+    overflow-x: hidden;
+}
+
+//Sidemenu styles
+
+
+.sidemenu-hide{
+    margin-left: 100vw;
+}
+
+.sidemenu-show{
+    margin-left: calc(100vw - 276px);
+}
+
+.cntr-move{
+    margin-left: -276px;
+    overflow: hidden;
+}
+
+
+
+
+
+#overlay{
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 10;
+    cursor: pointer;
+}
+
+.anim{
+    transition: all 0.4s ease-in-out 0.1s;
+}
+
+.header-normal,
+.cntr-normal{
+    margin-left: 0;
+}
+
+.cntr-move{
+    position: absolute;
+}
+
+.cntr-hide{
+    position: inherit;
+}
+
+#sidemenu{
+    flex-direction: column;
+    position: fixed;
+    display: flex;
+    top: 0;
+    width: 275px;
+    height: 100vh;
+    overflow-y: scroll;
+    z-index: 10;
+    
+    text-transform: uppercase;
+
+    
+
+
+
+    .sidemenu-content{
+        div,
+        ul{
+            margin-top: 20px; 
+            border-radius: 3px;
+            outline: 1px solid rgba(0,0,0,.25);
+            border: 1px solid hsla(0,0%,100%,.1);
+            width: 176px;
+        }
+
+        a{
+            width: 216px;
+
+        }
+
+        ul{
+            background: rgba(0,0,0,.25);
+            padding: 0 20px;
+            font-size: 16px;
+        }
+
+        div{
+            padding: 20px;
+        }
+    }
+
+    .s-txt-mb{
+        font-size: 10px;
+        margin-bottom: -6px;
+    }
+
+    .l-txt-mb{
+        font-size: 18px;
+    }
+
+    ul{
+        padding-left: 0;
+    }
+
+    li{
+        list-style: none; 
+    }
+}
+
+.sidemenu-cntr{
+    background: $dark-navy;
+    
+}
+
+.sidemenu-content-top{   
+    color: white;
+    font-size: 18px;
+    padding: 10px 20px;
+    border-radius: 3px;
+    text-align: center;
+    outline: 1px solid rgba(0,0,0,.25);
+    border: 1px solid hsla(0,0%,100%,.1);
+    width: 174.43px;
+}
+
+.sidemenu-content-top:hover {
+    background: #3d404d;
+}
+
+.sidemenu-content:hover {
+    .sidemenu-btn-main div{
+        background: #3d404d;
+    }
+}
+
+.purple-icon{
+    color: $purple-accent-color;
+}
+
+.blue-icon{
+    color: $blue-accent-color;
+}
+
+.red-icon{
+    color: $telecoms-card-color;
+}
+
+.grey-icon{
+    color: $software-card-color;
+}
+
+.green-icon{
+    color: $marketing-card-color;
+}
+
+.crimson-icon{
+    color: $security-card-color;
+}
+
+.sidemenu-content{   
+    text-align: center;
+    color: white;
+    ul{
+        padding:0;
+        margin:0;
+    }
+
+    li{
+        border-top: 1px solid hsla(0,0%,100%,.1);
+        border-bottom: 1px solid rgba(0,0,0,.25);
+        width: 123%;
+        margin-left: -20px;
+        padding: 10px 0;
+    }
+}
+
+.mobile-sidemenu{
+    border-bottom: 1px solid rgba(0,0,0,.25);
+    padding: 21px 13px 21px 19px;
+}
+
+.pc-sidemenu{
+    border-top: 1px solid hsla(0,0%,100%,.1);
+    color: white;
+    padding: 0;
+}
+
+.lsm-title div,
+.lower-sidemenu-content ul li{
+    border-top: 2px solid hsla(0,0%,100%,.1);
+    border-bottom: 2px solid rgba(0,0,0,.25);
+}
+
+.lower-sidemenu-content {
+    .lsm-title div{
+        padding:16px 0 20px 20px;
+        width: 235px;
+        height: 16px;
+        vertical-align: top;
+    }
+
+    li a div{
+        padding: 15.5px 20px;
+        line-height: 20px;
+    }
+
+    .fa-angle-double-right{
+        font-size: 10px;
+        padding-right: 15px;
+        margin-top: -100px;
+    }
+
+    ul{
+        background: rgba(0,0,0,.25);
+        font-size: 14px;
+    }
+}
+
+.lower-sidemenu-content:hover {
+    .lsm-title{
+        background: #3d404d;
+    }
+}
 
 //button hover states
 .btn-hover-black:hover{
@@ -49,22 +602,20 @@ html{
     background: #ebebeb;
 }
 
-
-
 /* Topbar Styles*/ 
 
 /* Topbar IDs  */
 
 #btn-sidemenu{
     font-size: 0.5rem;
-    
+    margin-left:20px;
+
     button{
         padding: 0 12px;
         background-color: $dark-navy;
         height:56px;
         line-height: 8px;
     }
-    margin-left:20px;
 }
 
 #btn-sidemenu:hover{
@@ -75,7 +626,6 @@ html{
 
 #txt-menu-btn{
     font-size: 0.7rem;
-    
 }
 
 #icn-menu{
@@ -105,7 +655,6 @@ html{
     display: flex;
     flex-wrap: nowrap;
     width: auto;
-
     margin: 0.6rem;
     
     div{
@@ -117,7 +666,6 @@ html{
     max-width: 100%;
     width: 100%;
     height: 40px;
-    //display: inline-block;
     z-index: -1;
     background: $search-bar-colour;
     border: 2px solid $search-bar-colour;
@@ -125,7 +673,6 @@ html{
     margin-top: 10px;
     border-radius: 3px;
     color: #555;
-
 }
 
 #actions{
@@ -171,7 +718,7 @@ input:focus{
 .tb-cntr{
     margin-right: auto;
     margin-left: auto;
-    margin-top: 0.8rem;
+    padding: 0.8rem 8px 0 8px;
     min-height: 157px;
 }
 
@@ -407,7 +954,7 @@ a, a:visited {
     right:0; 
     display: none;
     padding: 0;
-    
+    z-index: 15;
 }
 
 .lnb-ul{
@@ -419,8 +966,8 @@ a, a:visited {
     justify-content: left;
     list-style: none;
     position: absolute;
-    left: 0;
-    right:0; 
+    left: calc((100vw - #{$container-width})/2);
+    
     li{
         display:inline;
         width: auto;
@@ -430,6 +977,8 @@ a, a:visited {
         }
     }
 }
+
+
 
 .lnb-h::after{
     content:"-";
@@ -548,31 +1097,100 @@ a, a:visited {
     padding-bottom: 3px;
 }
 
+#slider{
+    margin-left: -1px;
+}
 .carousel-item{
     text-align: center;
-    width:100%;
-    height: calc(100vh - 157px);
+    width:100vw;
+    height: calc(100vh - 170px);
+    min-height: 531px;
     vertical-align: middle;
     display: flex;
+
 }
 
 .all-caps{
     text-transform: uppercase;
 }
 
-.carousel{
-    display:flex;
-    width: 100%;
-    height:100%;  
-}  
+#slider-dot-container{
+    position: absolute;
+    bottom: 10px;
+    left: 45vw;
+    color: white;
+    display: flex;
+    
+}
 
-#slider-container{
+#carousel{
     border-top: 0.1px solid white;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: nowrap;
     flex-grow: 1;
-    height: 100%;
+    width: 100vw;
+    flex-wrap: wrap;
+    
 }
+
+#slider{
+    position:relative;
+    .owl-item{
+        width: 100vw;
+        
+    }
+    
+}
+
+.owl-stage{
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.owl-nav{
+    display: none;
+}
+
+.owl-dot{
+    position: relative;
+    background: none;
+    border: none;
+    span{
+        background-color: hsla(0,0%,100%,.5);
+        width: 14px;
+        height: 14px;
+        margin: 0 10px;
+        display: block;
+        border-radius: 50%;
+    }
+}
+
+
+.owl-dots{
+    position: absolute;
+    bottom: 50px;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+}
+
+.active{
+    span{
+        background-color: #fff;
+    }
+    span:after{
+        content: "";
+        position: absolute;
+        top: -5.5px;
+        left: 9px;
+        width: 23px;
+        height: 23px;
+        border-radius: 50%;
+        border: 2px solid #fff;
+    }
+}
+
 
 .carousel-content{
     margin: 0 auto;
@@ -582,6 +1200,7 @@ a, a:visited {
     display: block;
     align-self: center;
     justify-content: center;
+    padding: 0 25px 0 5px;
     p {
         line-height: 2.4rem;
         margin: 2rem 0;
@@ -605,6 +1224,34 @@ a, a:visited {
 
 #web-design-container{
     background: linear-gradient(90deg, rgb(0, 0, 0) 0%, rgba(0, 0, 0, 0.6) 60%,  rgba(22, 22, 22, 0) 100%), url(https://www.netmatters.co.uk/assets/images/thumbnails/full_height_slideshow/home-3wAI.jpg);
+}
+
+#support-container{
+    background: linear-gradient(90deg, rgb(0, 0, 0) 0%, rgba(0, 0, 0, 0.6) 60%,  rgba(22, 22, 22, 0) 100%), url(https://www.netmatters.co.uk/assets/images/thumbnails/full_height_slideshow/home-57sJ.jpg);
+}
+
+#services-container{
+    background: linear-gradient(90deg, rgb(0, 0, 0) 0%, rgba(0, 0, 0, 0.6) 60%,  rgba(22, 22, 22, 0) 100%), url(https://www.netmatters.co.uk/assets/images/thumbnails/full_height_slideshow/home-5yqm.jpg);
+}
+
+#software-container{
+    background: linear-gradient(90deg, rgb(0, 0, 0) 0%, rgba(0, 0, 0, 0.6) 60%,  rgba(22, 22, 22, 0) 100%), url(https://www.netmatters.co.uk/assets/images/thumbnails/full_height_slideshow/home-sqvx.jpg);
+}
+
+#marketing-container{
+    background: linear-gradient(90deg, rgb(0, 0, 0) 0%, rgba(0, 0, 0, 0.6) 60%,  rgba(22, 22, 22, 0) 100%), url(https://www.netmatters.co.uk/assets/images/thumbnails/full_height_slideshow/home-JQsO.jpg);
+}
+
+#security-container{
+    background: linear-gradient(90deg, rgb(0, 0, 0) 0%, rgba(0, 0, 0, 0.6) 60%,  rgba(22, 22, 22, 0) 100%), url(https://www.netmatters.co.uk/assets/images/thumbnails/full_height_slideshow/home-lQs1.jpg);
+}
+
+#web-design-container,
+#support-container,
+#services-container,
+#software-container,
+#marketing-container,
+#security-container{
     background-position: center;
     background-size:cover;
     background-repeat: no-repeat;
@@ -701,7 +1348,6 @@ a, a:visited {
         display:table-cell;
         vertical-align: middle;
         align-self: center;
-        
     }
 }
 
@@ -1130,10 +1776,6 @@ a, a:visited {
     }
 }
 
-
-
-
-
 /*  form styles   */
 
 #newsletter-signup-form{
@@ -1538,9 +2180,32 @@ h4{
 
 //first breakpoint
 @media(min-width: 767px){
+    $container-width: 720px;
 
     .info-card{
         max-width: 640px;
+    }
+
+    .carousel-item{
+        height: calc(100vh - 122px);
+    }
+
+    .extra-margin{
+        margin-top: 122.8px;
+    }
+
+    #cookie-popup .cookie-btn-cntr{
+        display: flex;
+
+        button{
+            width: 264px;
+            padding: 13px 33px;
+            font-stretch: normal;
+        }
+    
+        button:first-child{
+            margin-bottom: 0;
+        }
     }
 
     .lower-card-grid{
@@ -1674,6 +2339,73 @@ h4{
 
 //second breakpoint
 @media(min-width: 991px){
+    //cookies
+
+    .cookie-margin{
+        margin: 0 calc((100vw - 970px)/2);
+    }
+
+    .detail-row, .detail-header{
+        width: 920px;
+        .col1{
+            width: 190px;
+        }
+
+        .col2{
+            width: 450px;
+        }
+
+    }
+
+    .cookie-buttons-cntr{
+        margin-left: 700px;
+
+    }
+
+    .cookie-bottom-buttons{
+        margin-left: 620px;
+    }
+
+    //not cookies
+    .cntr-move{
+        margin-left: -351px;
+        overflow: hidden;
+    }
+    
+    .sidemenu-show{
+        margin-left: calc(100vw - 351px);
+    }
+
+    $container-width: 940px;
+
+    .lnb-ul{
+        left: calc((100vw - #{$container-width})/2);
+    }
+
+    .carousel-item{
+        height: calc(100vh - 215px);
+    }
+
+    .mobile-sidemenu{
+        display: none;
+    }
+
+    #sidemenu{
+        width: 350px;
+    }
+
+    .lower-sidemenu-content .lsm-title div{
+        width: 310px;
+    }
+    
+
+    .pc-sidemenu{
+        border-top: none;
+    }
+
+    .extra-margin{
+        margin-top: 204px;
+    }
 
     .upper-card-grid,
     .lower-card-grid,
@@ -1830,6 +2562,38 @@ h4{
 
 //third breakpoint
 @media(min-width: 1259px){
+    //cookies
+    .cookie-margin{
+        margin: 0 calc((100vw - 1200px)/2);
+    }
+
+    .detail-row, .detail-header{
+        width: 1150px;
+        .col1{
+            width: 245px;
+        }
+
+        .col2{
+            width: 590px;
+        }
+
+    }
+
+    .cookie-buttons-cntr{
+        margin-left: 930px;
+
+    }
+
+    .cookie-bottom-buttons{
+        margin-left: 850px;
+    }
+
+    //not cookies
+    $container-width: 1170px;
+
+    .lnb-ul{
+        left: calc((100vw - #{$container-width})/2);
+    }
 
     .pc-search-bar{
         margin-right: 0px;
@@ -2058,5 +2822,3 @@ h4{
     }
 }
     
-
-// Fix the info card and article "buttons"
