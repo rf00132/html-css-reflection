@@ -2,14 +2,9 @@ const header = document.getElementById("header");
 const main = document.getElementById("slider");
 const tracker = document.getElementById("position-tracker");
 const cntr = document.getElementById("content");
+
 let sticky = 200;
-
-
-
-
 let lastScroll = 0;
-
-
 
 function stickyHeader(){
     if ( cntr.scrollTop < lastScroll ){
