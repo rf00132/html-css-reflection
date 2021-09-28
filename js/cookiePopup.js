@@ -1,31 +1,36 @@
-import Cookies from '../js-cookie/js.cookie.mjs';
-let inSettingsMenu = false;
-let showDetailedCookies = false;
-let functionCookies = false;
-let perfalyseCookies = false;
-let forensicsCookie = false;
-let hotjarCookie = false;
-let linkedinCookie = false;
-let facebookCookie = false;
-let googleCookie = false;
-let tawkCookie = false;
-const popUp = document.getElementById("cookie-popup");
-const funcCookiesEnable = document.getElementById("func-cookies-enable");
-const funcCookiesDisable = document.getElementById("func-cookies-disable");
-const perfCookiesEnable = document.getElementById("perf-cookies-enable");
-const perfCookiesDisable = document.getElementById("perf-cookies-disable");
-const forenCookieEnable = document.getElementById("foren-cookie-enable");
-const forenCookieDisable = document.getElementById("foren-cookie-disable");
-const hotjarCookieEnable = document.getElementById("hotjar-cookie-enable");
-const hotjarCookieDisable = document.getElementById("hotjar-cookie-disable");
-const linkedinCookieEnable = document.getElementById("linkedin-cookie-enable");
-const linkedinCookieDisable = document.getElementById("linkedin-cookie-disable");
-const facebookCookieEnable = document.getElementById("facebook-cookie-enable");
-const facebookCookieDisable = document.getElementById("facebook-cookie-disable");
-const googleCookieEnable = document.getElementById("google-cookie-enable");
-const googleCookieDisable = document.getElementById("google-cookie-disable");
-const tawkCookieEnable = document.getElementById("tawk-cookie-enable");
-const tawkCookieDisable = document.getElementById("tawk-cookie-disable");
+"use strict";
+
+var _jsCookie = _interopRequireDefault(require("../js-cookie/js.cookie.mjs"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var inSettingsMenu = false;
+var showDetailedCookies = false;
+var functionCookies = false;
+var perfalyseCookies = false;
+var forensicsCookie = false;
+var hotjarCookie = false;
+var linkedinCookie = false;
+var facebookCookie = false;
+var googleCookie = false;
+var tawkCookie = false;
+var popUp = document.getElementById("cookie-popup");
+var funcCookiesEnable = document.getElementById("func-cookies-enable");
+var funcCookiesDisable = document.getElementById("func-cookies-disable");
+var perfCookiesEnable = document.getElementById("perf-cookies-enable");
+var perfCookiesDisable = document.getElementById("perf-cookies-disable");
+var forenCookieEnable = document.getElementById("foren-cookie-enable");
+var forenCookieDisable = document.getElementById("foren-cookie-disable");
+var hotjarCookieEnable = document.getElementById("hotjar-cookie-enable");
+var hotjarCookieDisable = document.getElementById("hotjar-cookie-disable");
+var linkedinCookieEnable = document.getElementById("linkedin-cookie-enable");
+var linkedinCookieDisable = document.getElementById("linkedin-cookie-disable");
+var facebookCookieEnable = document.getElementById("facebook-cookie-enable");
+var facebookCookieDisable = document.getElementById("facebook-cookie-disable");
+var googleCookieEnable = document.getElementById("google-cookie-enable");
+var googleCookieDisable = document.getElementById("google-cookie-disable");
+var tawkCookieEnable = document.getElementById("tawk-cookie-enable");
+var tawkCookieDisable = document.getElementById("tawk-cookie-disable");
 funcCookiesEnable.addEventListener("click", function () {
   if (!functionCookies) {
     functionCookies = true;
@@ -130,11 +135,11 @@ function SwapButtons(whiteBtn, purpleBtn) {
   whiteBtn.classList.add("white-btn");
 }
 
-const acceptCookiesBtn = document.getElementById("accept-cookies-btn");
-const cookieSettingsBtn = document.getElementById("cookie-settings-btn");
-const cookieDetailsBtn = document.getElementById("cookie-details-btn");
-const acceptDetailCookiesBtn = document.getElementById("accept-detail-cookies-btn");
-const backToFirstScreenBtn = document.getElementById("return-to-cookies-btn");
+var acceptCookiesBtn = document.getElementById("accept-cookies-btn");
+var cookieSettingsBtn = document.getElementById("cookie-settings-btn");
+var cookieDetailsBtn = document.getElementById("cookie-details-btn");
+var acceptDetailCookiesBtn = document.getElementById("accept-detail-cookies-btn");
+var backToFirstScreenBtn = document.getElementById("return-to-cookies-btn");
 acceptCookiesBtn.addEventListener("click", AcceptCookies);
 cookieSettingsBtn.addEventListener("click", ShowSettingsMenu);
 cookieDetailsBtn.addEventListener("click", ShowDetailCookies);
@@ -172,23 +177,26 @@ function ShowDetailCookies() {
 }
 
 function AcceptCookies() {
-  Cookies.set("cookiesSet", "true");
-  Cookies.set("functionalCookies", "accepted");
-  Cookies.set("perfalyseCookies", "accepted");
+  _jsCookie.default.set("cookiesSet", "true");
+
+  _jsCookie.default.set("functionalCookies", "accepted");
+
+  _jsCookie.default.set("perfalyseCookies", "accepted");
+
   AcceptDetailedCookies();
   popUp.classList.remove("show-popup");
   popUp.classList.add("hide-popup");
 }
 
 function OnShownAcceptCookies() {
-  Cookies.set("cookiesSet", "true");
+  _jsCookie.default.set("cookiesSet", "true");
 
   if (functionCookies) {
-    Cookies.set("functionalCookies", "accepted");
+    _jsCookie.default.set("functionalCookies", "accepted");
   }
 
   if (perfalyseCookies) {
-    Cookies.set("perfalyseCookies", "accepted");
+    _jsCookie.default.set("perfalyseCookies", "accepted");
   }
 
   if (showDetailedCookies) {
@@ -202,42 +210,47 @@ function OnShownAcceptCookies() {
 }
 
 function AcceptDetailedCookies() {
-  Cookies.set("forensics", "accepted");
-  Cookies.set("hotjar", "accepted");
-  Cookies.set("linkedin", "accepted");
-  Cookies.set("facebook", "accepted");
-  Cookies.set("google", "accepted");
-  Cookies.set("tawk", "accepted");
+  _jsCookie.default.set("forensics", "accepted");
+
+  _jsCookie.default.set("hotjar", "accepted");
+
+  _jsCookie.default.set("linkedin", "accepted");
+
+  _jsCookie.default.set("facebook", "accepted");
+
+  _jsCookie.default.set("google", "accepted");
+
+  _jsCookie.default.set("tawk", "accepted");
 }
 
 function OnShowAcceptDetailedCookies() {
   if (forensicsCookie) {
-    Cookies.set("forensics", "accepted");
+    _jsCookie.default.set("forensics", "accepted");
   }
 
   if (hotjarCookie) {
-    Cookies.set("hotjar", "accepted");
+    _jsCookie.default.set("hotjar", "accepted");
   }
 
   if (linkedinCookie) {
-    Cookies.set("linkedin", "accepted");
+    _jsCookie.default.set("linkedin", "accepted");
   }
 
   if (facebookCookie) {
-    Cookies.set("facebook", "accepted");
+    _jsCookie.default.set("facebook", "accepted");
   }
 
   if (googleCookie) {
-    Cookies.set("google", "accepted");
+    _jsCookie.default.set("google", "accepted");
   }
 
   if (tawkCookie) {
-    Cookies.set("tawk", "accepted");
+    _jsCookie.default.set("tawk", "accepted");
   }
 }
 
 function CheckForCookies() {
-  if (Cookies.get("cookiesSet") != "true") {
+  if (_jsCookie.default.get("cookiesSet") != "true") {
     DisplayPopup();
   }
 }

@@ -1,13 +1,16 @@
-"use strict";
 
 var button = document.getElementById("btn-sidemenu");
 var menu = document.getElementById("sidemenu");
 var overlay = document.getElementById("overlay");
 var hidden = true;
+var btnInner = document.getElementsByClassName("hamburger--spin")[0];
+
 button.addEventListener("click", ToggleMenu);
 overlay.addEventListener("click", CloseMenu);
 
+
 function ToggleMenu() {
+  
   if (hidden) {
     menu.classList.add("anim");
     cntr.classList.add("anim");
@@ -17,6 +20,7 @@ function ToggleMenu() {
     header.classList.remove("header-normal");
     menu.classList.add("sidemenu-show");
     menu.classList.remove("sidemenu-hide");
+    btnInner.classList.add("is-active");
     overlay.style.display = "block";
     hidden = false;
     setTimeout(function () {
@@ -37,6 +41,7 @@ function CloseMenu() {
   cntr.classList.remove("cntr-move");
   header.classList.add("header-normal");
   header.classList.remove("header-move");
+  btnInner.classList.remove("is-active");
   overlay.style.display = "none";
   hidden = true;
   setTimeout(function () {

@@ -4,7 +4,8 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
         <title>Netmatters | Full Service Digital Agency | Norwich, Norfolk | Netmatters</title>
-        <link rel="stylesheet" href="sass/style.css">
+        <link href="burger-menu/hamburgers.css" rel="stylesheet">
+        <link rel="stylesheet" href="css/style.css">
         <link rel="icon" href="img/icon-netmatters.png">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
         <script src="https://kit.fontawesome.com/352c99e409.js" crossorigin="anonymous"></script>
@@ -142,7 +143,7 @@
                     
                 </div>
             </div>
-            <script type="module" src="/js/cookiePopup.js"></script>
+            <script type="module" src="/src/cookiePopup.js"></script>
         </div>
 
 
@@ -182,8 +183,11 @@
                                     </div>    
         
                                     <span id="btn-sidemenu">
-                                        <button type="button" class="button btn btn-hover-black">
-                                            <i class="fas fa-bars" id="icn-menu"></i>
+                                        <button type="button" class="hamburger hamburger--spin button btn btn-hover-black">
+                                            <span class="hamburger-box">
+                                                <span class="hamburger-inner"></span>
+                                                
+                                            </span>
                                             <span id="txt-menu-btn">
                                                 Menu
                                             </span>
@@ -361,8 +365,7 @@
   
                 <main>
                     <!--owl carousel deleting dots, look into it-->
-                    <div id="slider">
-                        
+                    <div id="slider">       
                         <div id="carousel" class="owl-carousel owl-theme">
                             
                             <div class="carousel-item" id="web-design-container">
@@ -387,11 +390,11 @@
                                         IT Support
                                     </h1>
                                     <p>
-                                        For businesses looking to make a strong 
+                                        Fast and effective IT support
                                         <br>
-                                        and effective first impression.
+                                        services for your business
                                     </p>
-                                    <button class="button all-caps btn-hover-purple" id="btn-web-design">
+                                    <button class="button all-caps btn-hover-purple" id="btn-support">
                                         Find out more
                                         <img src="img/icon-arrow-right.png" alt="Right Arrow Icon" class="icn-right-arrow">
                                     </button>
@@ -403,11 +406,11 @@
                                         Telecoms Services
                                     </h1>
                                     <p>
-                                        For businesses looking to make a strong 
+                                        A new approach to connectivity, see how 
                                         <br>
-                                        and effective first impression.
+                                        we can help your business.
                                     </p>
-                                    <button class="button all-caps btn-hover-purple" id="btn-web-design">
+                                    <button class="button all-caps btn-hover-purple" id="btn-services">
                                         Find out more
                                         <img src="img/icon-arrow-right.png" alt="Right Arrow Icon" class="icn-right-arrow">
                                     </button>
@@ -419,11 +422,11 @@
                                         Bespoke Software
                                     </h1>
                                     <p>
-                                        For businesses looking to make a strong 
+                                        Bring your business together
                                         <br>
-                                        and effective first impression.
+                                        with solutions that grow with you.
                                     </p>
-                                    <button class="button all-caps btn-hover-purple" id="btn-web-design">
+                                    <button class="button all-caps btn-hover-purple" id="btn-software">
                                         Find out more
                                         <img src="img/icon-arrow-right.png" alt="Right Arrow Icon" class="icn-right-arrow">
                                     </button>
@@ -435,11 +438,11 @@
                                         Digital Marketing
                                     </h1>
                                     <p>
-                                        For businesses looking to make a strong 
+                                        Generating you new business through
                                         <br>
-                                        and effective first impression.
+                                        results-driven marketing activities.
                                     </p>
-                                    <button class="button all-caps btn-hover-purple" id="btn-web-design">
+                                    <button class="button all-caps btn-hover-purple" id="btn-marketing">
                                         Find out more
                                         <img src="img/icon-arrow-right.png" alt="Right Arrow Icon" class="icn-right-arrow">
                                     </button>
@@ -451,11 +454,11 @@
                                         Cyber Security
                                     </h1>
                                     <p>
-                                        For businesses looking to make a strong 
+                                        Keeping businesses and their customers 
                                         <br>
-                                        and effective first impression.
+                                        sensitive information protected.
                                     </p>
-                                    <button class="button all-caps btn-hover-purple" id="btn-web-design">
+                                    <button class="button all-caps btn-hover-purple" id="btn-security">
                                         Find out more
                                         <img src="img/icon-arrow-right.png" alt="Right Arrow Icon" class="icn-right-arrow">
                                     </button>
@@ -463,10 +466,6 @@
                             </div>
                             
                         </div>
-
-
-                        
-                        
                         <script src="owlcarousel/owl.carousel.min.js"></script>
                         <script src="js/stickyNav.js"></script>
                     </div>

@@ -1,3 +1,4 @@
+
 // Variables    
 $light-grey: #fefefe;
 $dark-navy: #333645;
@@ -114,10 +115,6 @@ body{
     flex-direction: row;
     align-items: center;
     justify-content: center;
-
-
-
-    
 }
 
 
@@ -608,14 +605,51 @@ body{
 
 #btn-sidemenu{
     font-size: 0.5rem;
-    margin-left:20px;
-
+    margin-left:10px;
+    max-width: 43px;
+    margin-right: 22px;
     button{
         padding: 0 12px;
         background-color: $dark-navy;
         height:56px;
         line-height: 8px;
+        
     }
+
+    
+}
+
+.hamburger{
+    max-width: 63px;
+}
+.hamburger-inner, 
+.hamburger-inner::before,
+.hamburger-inner::after{
+    border-radius: 0;
+    width: 33px;
+    height: 3px;
+}
+
+.hamburger-inner, 
+.hamburger-inner::before,
+.hamburger-inner::after,
+.hamburger.is-active .hamburger-inner,
+.hamburger.is-active .hamburger-inner::before,
+.hamburger.is-active .hamburger-inner::after{
+    background-color: white;
+}
+
+.hamburger-inner::after{
+    bottom: -8px;
+}
+
+.hamburger-inner::before{
+    top: -8px;
+}
+
+.hamburger-box{
+    margin-bottom: 5px;
+    padding-left: 2px;
 }
 
 #btn-sidemenu:hover{
@@ -689,6 +723,7 @@ input:focus{
     z-index: 2;
     cursor: pointer;
     background: none;
+    color: #333645;
 }
 
 /* Topbar Classes  */
@@ -821,7 +856,7 @@ img{
     background-color: transparent;
     border-color: transparent;
     margin-top: 6px;
-
+    color: black;
 }
 .hidden{
     display: none;
@@ -1260,12 +1295,58 @@ a, a:visited {
 #btn-web-design{
     background-color: #926fb1;
     border-color: #926fb1;
-    
 }
 #btn-web-design:hover{
     background-color: #7e57a0;
 }
 
+$software-card-color: #67809f;
+$blue-accent-color: #4183d7;
+$marketing-card-color: #2ecc71;
+$telecoms-card-color: #d64541;
+$purple-accent-color: #926fb1;
+$security-card-color: #f62459;
+
+
+#btn-support{
+    background-color: $blue-accent-color;
+    border-color: $blue-accent-color;
+}
+#btn-support:hover{
+    background-color: #2f71c7;
+}
+
+#btn-services{
+    background-color: $telecoms-card-color;
+    border-color: $telecoms-card-color;    
+}
+#btn-service:hover{
+    background-color: #c4332e;
+}
+
+#btn-software{
+    background-color: $software-card-color;
+    border-color: $software-card-color;
+}
+#btn-software:hover{
+    background-color: #506a8a;
+}
+
+#btn-marketing{
+    background-color: $marketing-card-color;
+    border-color: $marketing-card-color;
+}
+#btn-marketing:hover{
+    background-color: #2ecc71;
+}
+
+#btn-security{
+    background-color: $security-card-color;
+    border-color: $security-card-color;
+}
+#btn-security:hover{
+    background-color: #f62459;
+}
 
 
 /*** Card Styles***/
@@ -1341,7 +1422,7 @@ a, a:visited {
     height: 24px;
     margin: 10px auto;
     text-align: left;
-    padding-top: 8px;
+    padding-top: 18px;
     text-align: center;
     fill:white;
     i{
