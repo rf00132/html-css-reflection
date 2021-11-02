@@ -17,7 +17,7 @@
 
     <body>
         <div id="overlay"></div>
-        <div id="position-tracker"></div>
+       
         <div id="cookie-popup" class="hide-settings hide-detail hide-popup">
             <div class="main-popup">
                 <div class="main-popup-cntr">
@@ -792,6 +792,15 @@
                     </div>
                     <div id="newsletter-signup-form">
                         <form>
+                            <div id="form-error-message-container">
+                                <div class="error-message">
+                                    <p>The name field is required.</p>
+                                     <span class="close-error-btn">
+                                         <i class="fas fa-times"></i>
+                                     </span>
+                                </div>
+
+                            </div>
                             <h2>Email Newsletter Sign-Up</h2>
                             <div class="form-inputs">
                                 <div>
@@ -804,11 +813,12 @@
                                     <br>
                                     <input class="newsletter-input blue-shadow-effect" type="email" name="email" id="email-entry-form">
                                 </div> 
+                                
                             </div>
                             <div class="privacy-policy-check">
                                 <label class="check-cntr" >
                                     <span class="checkbox">
-                                        <input type="checkbox">
+                                        <input id="marketing-checkbox" type="checkbox">
                                         <span class="checkmark">     
                                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!-- Font Awesome Free 5.15.3 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z"/></svg>
                                         </span>
@@ -820,7 +830,8 @@
                                     </span>
                                 </label>
                             </div>
-                            <button type="submit" class="button all-caps btn-hover-black">Subscribe</button>
+                            <button type="submit" class="button all-caps btn-hover-black" id="submit-btn">Subscribe</button>
+                            <script src="src/formValidation.js"></script>
                         </form>
                     </div>
                     

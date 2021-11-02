@@ -1422,7 +1422,7 @@ $security-card-color: #f62459;
     height: 24px;
     margin: 10px auto;
     text-align: left;
-    padding-top: 18px;
+    padding-top: 8px;
     text-align: center;
     fill:white;
     i{
@@ -1893,6 +1893,33 @@ $security-card-color: #f62459;
         background: black;
     }
 }
+
+#form-error-message-container{
+    margin: 0;
+    .error-message{
+        color: #a94442;
+        background: #f2dede;
+        display: flex;
+        justify-content: space-between;
+        padding: 15px;
+        margin-bottom: 20px;
+        font-size: 16px;
+
+        
+    }
+    .close-error-btn{
+        padding-top: 3px;
+        padding-right:5px;
+        color: black;
+        opacity: 0.2;
+        
+        &:hover{
+            opacity: 0.6;
+        }
+    }
+}
+
+
 
 .check-cntr{
     display: inline-block;
