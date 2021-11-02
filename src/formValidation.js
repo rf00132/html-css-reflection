@@ -9,8 +9,6 @@ const nameRegex = /^[\w'\-,.][^0-9_!¡?÷?¿/\\+=@#$%ˆ&*(){}|~<>;:[\]]{2,}$/;
 const emailRegex = /^\S+@\S+\.\S+$/;
 
 const ogBorderColour = nameInput.style.borderColor;
-const borderErrorColor = "red";
-const errorMessage = "Please fix required fields."
 
 let validName;
 let validEmail;
