@@ -320,17 +320,17 @@ body{
 .sticky{
     position: fixed;
     z-index: 5;
-    width: 100vw;
+    width: calc(100vw - 17px);
     transition: top 0.4s ease-in-out 0.1s;
     nav{
         background: $dark-navy;
-        padding-right: 16.5px;
     }
 
     header{
         background: white;
-        padding-right: 16.5px;
     }
+
+
 }
 
 .sticky-show{
